@@ -44,4 +44,4 @@ install/update plugins:
 
 ## Included Plugins
 
-See [`plug-setup.vim`](blob/master/plug-setup.vim) for a list of included plugins.
+See [`plug-setup.vim`](plug-setup.vim) for a list of included plugins.
