@@ -18,14 +18,6 @@ included at [`share/install-vim.sh`](share/install-vim.sh) to help install
 console Vim. For MacVim, try [b4winkler/macvim](http://git.io/2d9SNA) or
 [Homebrew](http://git.io/homebrew).
 
-# Setup and Maintenance
-
-I use [pathogen.vim](https://github.com/tpope/vim-pathogen/) and [git
-submodules](http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html)
-to handle third party plugins. All plugins are kept in the default location
-for pathogen, `~/.vim/bundle/`. A Makefile is included to update plugins and
-their helptags.
-
 ## Installation
 
 Before installing, backup `~/.vim`, `~/.vimrc` and `~/.gvimrc`
@@ -38,20 +30,18 @@ Before installing, backup `~/.vim`, `~/.vimrc` and `~/.gvimrc`
 Clone this repo:
 
     cd ~
-    git clone git://github.com/itspriddle/vim-config.git .vim --recursive
+    git clone git://github.com/itspriddle/vim-config.git .vim
     ln -s .vim/vimrc .vimrc
     ln -s .vim/gvimrc .gvimrc
 
 ## Updating Plugins and Helptags
 
-Update all plugins installed as git submodules and runs `:Helptags` to make
-Vim aware of their help documents:
+Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug). To
+install/update plugins:
 
-    cd ~/.vim
-    make update-plugins
-    make update-help
-    make update # runs both update-plugins and update-help
+    vim +PlugInstall
+
 
 ## Included Plugins
 
-See [`bundle/`](bundle) for a list of installed plugins.
+See [`blob/master/plug-setup.vim`](plug-setup.vim) for a list of included plugins.
