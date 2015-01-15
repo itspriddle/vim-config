@@ -39,7 +39,7 @@ Clone this repo:
 Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug). To
 install/update plugins:
 
-    vim +PlugInstall
+    vim +PlugUpdate
 
 
 ## Included Plugins
